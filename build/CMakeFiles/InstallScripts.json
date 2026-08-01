@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/christophermoore/Documents/single_node_kv_store/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
