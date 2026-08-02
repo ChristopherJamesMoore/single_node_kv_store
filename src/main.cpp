@@ -5,7 +5,7 @@
 int main() {
   std::string line;
 
-  std::cout << "kvstore: ";
+  std::cout << "kvstore> ";
   while(std::getline(std::cin, line)) {
     std::istringstream iss(line);
     std::string cmd;
