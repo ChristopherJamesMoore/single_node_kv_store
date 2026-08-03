@@ -6,7 +6,8 @@
 int main() {
   std::string line;
   Store store;
-  store.load("dump.txt");
+  store.openLog("kvstore.log");
+  store.replayLog("kvstore.log");
 
   std::cout << "kvstore> ";
   while(std::getline(std::cin, line)) {
@@ -33,9 +34,6 @@ int main() {
       std::cout << (store.remove(key) ? "OK\n" : "(nil)\n");
     } else if (cmd == "QUIT") {
       break;
-    } else if (cmd == "EXIT") {
-        store.save("dump.txt");
-        break;
     } else {
       std::cout << "unknown command\n";
     }
