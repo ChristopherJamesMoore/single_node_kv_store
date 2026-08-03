@@ -2,6 +2,8 @@
 #include <fstream>
 
 void Store::set(const std::string& key, const std::string& value) {
+  log_ << "SET" << key << " " << value << "\n";
+  log_.flush();
   data_[key] = value;
 }
 
@@ -14,6 +16,8 @@ std::optional<std::string> Store::get(const std::string& key) const {
 }
 
 bool Store::remove(const std::string& key) {
+  log_ << "DEL" << key << "\n";
+  log_.flush();
   return data_.erase(key) > 0;
 }
 
@@ -31,5 +35,24 @@ void Store::load(const std::string& filename) {
   std::string key, value;
   while (in >> key >> value ) {
     data_[key] = value;
+  }
+}
+
+void Store::openLog(const std::string& filename) {
+  log_.open(filename, std::ios::app);
+}
+
+void Store::replayLog(const std::string& filename) {
+  std::ifstream in(filename);
+  std::string op, key, value;
+
+  while (in >> op) {
+    if (op == "SET") {
+      in >> key >> value;
+      data_[key] = value;
+    } else if (op == "DEL") {
+      in >> key;
+       data_.erase(key);
+    }    
   }
 }

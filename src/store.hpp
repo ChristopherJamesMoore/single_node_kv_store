@@ -2,6 +2,7 @@
 #include <string>
 #include <unordered_map>
 #include <optional>
+#include <fstream>
 
 class Store {
   public:
@@ -10,7 +11,10 @@ class Store {
     bool remove(const std::string& key);
     void save(const std::string& filename) const;
     void load(const std::string& filename);
+    void openLog(const std::string& filename);
+    void replayLog(const std::string& filename);
 
   private:
     std::unordered_map<std::string, std::string> data_;
+    std::ofstream log_;
 };
