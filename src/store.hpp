@@ -13,6 +13,7 @@ class Store {
     void load(const std::string& filename);
     void openLog(const std::string& filename);
     void replayLog(const std::string& filename);
+    void snapshot(const std::string& snapshotFile, const std::string& logFile);
 
   private:
     std::unordered_map<std::string, std::string> data_;
