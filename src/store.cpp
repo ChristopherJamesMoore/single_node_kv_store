@@ -2,7 +2,7 @@
 #include <fstream>
 
 void Store::set(const std::string& key, const std::string& value) {
-  log_ << "SET" << key << " " << value << "\n";
+  log_ << "SET" << " " << key << " " << value << "\n";
   log_.flush();
   data_[key] = value;
 }
@@ -16,7 +16,7 @@ std::optional<std::string> Store::get(const std::string& key) const {
 }
 
 bool Store::remove(const std::string& key) {
-  log_ << "DEL" << key << "\n";
+  log_ << "DEL" << " " << key << "\n";
   log_.flush();
   return data_.erase(key) > 0;
 }
