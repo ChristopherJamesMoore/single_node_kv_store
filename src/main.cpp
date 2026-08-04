@@ -8,6 +8,7 @@ int main() {
   Store store;
   store.openLog("kvstore.log");
   store.replayLog("kvstore.log");
+  store.load("kvstore.snapshot");
 
   std::cout << "kvstore> ";
   while(std::getline(std::cin, line)) {
@@ -32,6 +33,9 @@ int main() {
       std::string key;
       iss >> key;
       std::cout << (store.remove(key) ? "OK\n" : "(nil)\n");
+    } else if (cmd == "SNAPSHOT") {
+      store.snapshot("kvstore.snapshot", "kvstore.log");
+      std::cout << "OK\n";
     } else if (cmd == "QUIT") {
       break;
     } else {

@@ -56,3 +56,12 @@ void Store::replayLog(const std::string& filename) {
     }    
   }
 }
+
+void Store::snapshot(const std::string& snapshotFile, const std::string& logFile) {
+  save(snapshotFile);
+
+  log_.close();
+  std::ofstream clear(logFile, std::ios::trunc);
+  clear.close();
+  openLog(logFile);
+}
