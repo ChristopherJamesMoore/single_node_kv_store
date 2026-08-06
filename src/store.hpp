@@ -3,6 +3,7 @@
 #include <unordered_map>
 #include <optional>
 #include <fstream>
+#include <shared_mutex>
 
 class Store {
   public:
@@ -18,4 +19,5 @@ class Store {
   private:
     std::unordered_map<std::string, std::string> data_;
     std::ofstream log_;
+    mutable std::shared_mutex mutex_;
 };
