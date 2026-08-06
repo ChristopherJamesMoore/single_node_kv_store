@@ -10,5 +10,17 @@
   "command": "/usr/bin/c++   -std=gnu++20 -arch arm64 -o CMakeFiles/kvstore.dir/src/store.cpp.o -c /Users/christophermoore/Documents/single_node_kv_store/src/store.cpp",
   "file": "/Users/christophermoore/Documents/single_node_kv_store/src/store.cpp",
   "output": "CMakeFiles/kvstore.dir/src/store.cpp.o"
+},
+{
+  "directory": "/Users/christophermoore/Documents/single_node_kv_store/build",
+  "command": "/usr/bin/c++  -I/Users/christophermoore/Documents/single_node_kv_store/third_party -std=gnu++20 -arch arm64 -o CMakeFiles/kvserver.dir/src/server.cpp.o -c /Users/christophermoore/Documents/single_node_kv_store/src/server.cpp",
+  "file": "/Users/christophermoore/Documents/single_node_kv_store/src/server.cpp",
+  "output": "CMakeFiles/kvserver.dir/src/server.cpp.o"
+},
+{
+  "directory": "/Users/christophermoore/Documents/single_node_kv_store/build",
+  "command": "/usr/bin/c++  -I/Users/christophermoore/Documents/single_node_kv_store/third_party -std=gnu++20 -arch arm64 -o CMakeFiles/kvserver.dir/src/store.cpp.o -c /Users/christophermoore/Documents/single_node_kv_store/src/store.cpp",
+  "file": "/Users/christophermoore/Documents/single_node_kv_store/src/store.cpp",
+  "output": "CMakeFiles/kvserver.dir/src/store.cpp.o"
 }
 ]
