@@ -1,3 +1,4 @@
 /Users/christophermoore/Documents/single_node_kv_store/build/CMakeFiles/kvstore.dir
+/Users/christophermoore/Documents/single_node_kv_store/build/CMakeFiles/kvserver.dir
 /Users/christophermoore/Documents/single_node_kv_store/build/CMakeFiles/edit_cache.dir
 /Users/christophermoore/Documents/single_node_kv_store/build/CMakeFiles/rebuild_cache.dir

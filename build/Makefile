@@ -129,6 +129,19 @@ kvstore/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/build
 .PHONY : kvstore/fast
 
+#=============================================================================
+# Target rules for targets named kvserver
+
+# Build rule for target.
+kvserver: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kvserver
+.PHONY : kvserver
+
+# fast build rule for target.
+kvserver/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvserver.dir/build.make CMakeFiles/kvserver.dir/build
+.PHONY : kvserver/fast
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -153,12 +166,37 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/server.o: src/server.cpp.o
+.PHONY : src/server.o
+
+# target to build an object file
+src/server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvserver.dir/build.make CMakeFiles/kvserver.dir/src/server.cpp.o
+.PHONY : src/server.cpp.o
+
+src/server.i: src/server.cpp.i
+.PHONY : src/server.i
+
+# target to preprocess a source file
+src/server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvserver.dir/build.make CMakeFiles/kvserver.dir/src/server.cpp.i
+.PHONY : src/server.cpp.i
+
+src/server.s: src/server.cpp.s
+.PHONY : src/server.s
+
+# target to generate assembly for a file
+src/server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvserver.dir/build.make CMakeFiles/kvserver.dir/src/server.cpp.s
+.PHONY : src/server.cpp.s
+
 src/store.o: src/store.cpp.o
 .PHONY : src/store.o
 
 # target to build an object file
 src/store.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/store.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvserver.dir/build.make CMakeFiles/kvserver.dir/src/store.cpp.o
 .PHONY : src/store.cpp.o
 
 src/store.i: src/store.cpp.i
@@ -167,6 +205,7 @@ src/store.i: src/store.cpp.i
 # target to preprocess a source file
 src/store.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/store.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvserver.dir/build.make CMakeFiles/kvserver.dir/src/store.cpp.i
 .PHONY : src/store.cpp.i
 
 src/store.s: src/store.cpp.s
@@ -175,6 +214,7 @@ src/store.s: src/store.cpp.s
 # target to generate assembly for a file
 src/store.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/store.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvserver.dir/build.make CMakeFiles/kvserver.dir/src/store.cpp.s
 .PHONY : src/store.cpp.s
 
 # Help Target
@@ -185,10 +225,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... kvserver"
 	@echo "... kvstore"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/server.o"
+	@echo "... src/server.i"
+	@echo "... src/server.s"
 	@echo "... src/store.o"
 	@echo "... src/store.i"
 	@echo "... src/store.s"
