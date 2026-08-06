@@ -19,7 +19,7 @@ int main() {
     if (cmd == "SET") {
       std::string key, value;
       iss >> key >> value;
-      store.set(key, value);
+      store.set(key, value); 
       std::cout << "OK\n";
     } else if (cmd == "GET") {
       std::string key; 
