@@ -142,6 +142,30 @@ kvserver/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvserver.dir/build.make CMakeFiles/kvserver.dir/build
 .PHONY : kvserver/fast
 
+src/benchmark_client.o: src/benchmark_client.cpp.o
+.PHONY : src/benchmark_client.o
+
+# target to build an object file
+src/benchmark_client.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/benchmark_client.cpp.o
+.PHONY : src/benchmark_client.cpp.o
+
+src/benchmark_client.i: src/benchmark_client.cpp.i
+.PHONY : src/benchmark_client.i
+
+# target to preprocess a source file
+src/benchmark_client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/benchmark_client.cpp.i
+.PHONY : src/benchmark_client.cpp.i
+
+src/benchmark_client.s: src/benchmark_client.cpp.s
+.PHONY : src/benchmark_client.s
+
+# target to generate assembly for a file
+src/benchmark_client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/benchmark_client.cpp.s
+.PHONY : src/benchmark_client.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -171,6 +195,7 @@ src/server.o: src/server.cpp.o
 
 # target to build an object file
 src/server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/server.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvserver.dir/build.make CMakeFiles/kvserver.dir/src/server.cpp.o
 .PHONY : src/server.cpp.o
 
@@ -179,6 +204,7 @@ src/server.i: src/server.cpp.i
 
 # target to preprocess a source file
 src/server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/server.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvserver.dir/build.make CMakeFiles/kvserver.dir/src/server.cpp.i
 .PHONY : src/server.cpp.i
 
@@ -187,6 +213,7 @@ src/server.s: src/server.cpp.s
 
 # target to generate assembly for a file
 src/server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvstore.dir/build.make CMakeFiles/kvstore.dir/src/server.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kvserver.dir/build.make CMakeFiles/kvserver.dir/src/server.cpp.s
 .PHONY : src/server.cpp.s
 
@@ -227,6 +254,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... kvserver"
 	@echo "... kvstore"
+	@echo "... src/benchmark_client.o"
+	@echo "... src/benchmark_client.i"
+	@echo "... src/benchmark_client.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

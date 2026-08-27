@@ -1,1 +1,1 @@
-/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/tcl-tk/lib CMakeFiles/kvstore.dir/src/main.cpp.o CMakeFiles/kvstore.dir/src/store.cpp.o -o kvstore
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/opt/homebrew/opt/tcl-tk/lib CMakeFiles/kvstore.dir/src/main.cpp.o CMakeFiles/kvstore.dir/src/store.cpp.o CMakeFiles/kvstore.dir/src/server.cpp.o CMakeFiles/kvstore.dir/src/benchmark_client.cpp.o -o kvstore

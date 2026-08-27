@@ -5,7 +5,9 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 find_package(Threads REQUIRED)
 
-add_executable(kvstore src/main.cpp src/store.cpp)
+include_directories(third_party)
+
+add_executable(kvstore src/main.cpp src/store.cpp src/server.cpp src/benchmark_client.cpp)
 
 add_executable(kvserver src/server.cpp src/store.cpp)
 target_include_directories(kvserver PRIVATE third_party)

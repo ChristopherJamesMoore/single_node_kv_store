@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/christophermoore/Documents/single_node_kv_store/src/benchmark_client.cpp" "CMakeFiles/kvstore.dir/src/benchmark_client.cpp.o" "gcc" "CMakeFiles/kvstore.dir/src/benchmark_client.cpp.o.d"
   "/Users/christophermoore/Documents/single_node_kv_store/src/main.cpp" "CMakeFiles/kvstore.dir/src/main.cpp.o" "gcc" "CMakeFiles/kvstore.dir/src/main.cpp.o.d"
+  "/Users/christophermoore/Documents/single_node_kv_store/src/server.cpp" "CMakeFiles/kvstore.dir/src/server.cpp.o" "gcc" "CMakeFiles/kvstore.dir/src/server.cpp.o.d"
   "/Users/christophermoore/Documents/single_node_kv_store/src/store.cpp" "CMakeFiles/kvstore.dir/src/store.cpp.o" "gcc" "CMakeFiles/kvstore.dir/src/store.cpp.o.d"
   )
 

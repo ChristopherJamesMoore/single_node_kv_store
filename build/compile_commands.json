@@ -1,15 +1,27 @@
 [
 {
   "directory": "/Users/christophermoore/Documents/single_node_kv_store/build",
-  "command": "/usr/bin/c++   -std=gnu++20 -arch arm64 -o CMakeFiles/kvstore.dir/src/main.cpp.o -c /Users/christophermoore/Documents/single_node_kv_store/src/main.cpp",
+  "command": "/usr/bin/c++  -I/Users/christophermoore/Documents/single_node_kv_store/third_party -std=gnu++20 -arch arm64 -o CMakeFiles/kvstore.dir/src/main.cpp.o -c /Users/christophermoore/Documents/single_node_kv_store/src/main.cpp",
   "file": "/Users/christophermoore/Documents/single_node_kv_store/src/main.cpp",
   "output": "CMakeFiles/kvstore.dir/src/main.cpp.o"
 },
 {
   "directory": "/Users/christophermoore/Documents/single_node_kv_store/build",
-  "command": "/usr/bin/c++   -std=gnu++20 -arch arm64 -o CMakeFiles/kvstore.dir/src/store.cpp.o -c /Users/christophermoore/Documents/single_node_kv_store/src/store.cpp",
+  "command": "/usr/bin/c++  -I/Users/christophermoore/Documents/single_node_kv_store/third_party -std=gnu++20 -arch arm64 -o CMakeFiles/kvstore.dir/src/store.cpp.o -c /Users/christophermoore/Documents/single_node_kv_store/src/store.cpp",
   "file": "/Users/christophermoore/Documents/single_node_kv_store/src/store.cpp",
   "output": "CMakeFiles/kvstore.dir/src/store.cpp.o"
+},
+{
+  "directory": "/Users/christophermoore/Documents/single_node_kv_store/build",
+  "command": "/usr/bin/c++  -I/Users/christophermoore/Documents/single_node_kv_store/third_party -std=gnu++20 -arch arm64 -o CMakeFiles/kvstore.dir/src/server.cpp.o -c /Users/christophermoore/Documents/single_node_kv_store/src/server.cpp",
+  "file": "/Users/christophermoore/Documents/single_node_kv_store/src/server.cpp",
+  "output": "CMakeFiles/kvstore.dir/src/server.cpp.o"
+},
+{
+  "directory": "/Users/christophermoore/Documents/single_node_kv_store/build",
+  "command": "/usr/bin/c++  -I/Users/christophermoore/Documents/single_node_kv_store/third_party -std=gnu++20 -arch arm64 -o CMakeFiles/kvstore.dir/src/benchmark_client.cpp.o -c /Users/christophermoore/Documents/single_node_kv_store/src/benchmark_client.cpp",
+  "file": "/Users/christophermoore/Documents/single_node_kv_store/src/benchmark_client.cpp",
+  "output": "CMakeFiles/kvstore.dir/src/benchmark_client.cpp.o"
 },
 {
   "directory": "/Users/christophermoore/Documents/single_node_kv_store/build",
